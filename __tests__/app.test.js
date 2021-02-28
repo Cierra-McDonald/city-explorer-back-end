@@ -376,17 +376,257 @@ test('function should return formatted longitude and latitude from location data
 
 
 test('function should return formatted data from yelp reviews', async() => { 
-  const yelpData = { };
+  const yelpData = {
+    'data' : [
+      {
+        'id': 'kViIWJFfAfWPpJOwAXBKGA',
+        'alias': 'national-september-11-memorial-museum-new-york',
+        'name': 'National September 11 Memorial Museum',
+        'image_url': 'https://s3-media2.fl.yelpcdn.com/bphoto/yoe6Wha7gQlTBNIeFO0UhQ/o.jpg',
+        'is_closed': false,
+        'url': 'https://www.yelp.com/biz/national-september-11-memorial-museum-new-york?adjust_creative=oiTfb6yARFWli9QCHW2uAQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=oiTfb6yARFWli9QCHW2uAQ',
+        'review_count': 1425,
+        'categories': [
+          {
+            'alias': 'museums',
+            'title': 'Museums'
+          }
+        ],
+        'rating': 4.5,
+        'coordinates': {
+          'latitude': 40.71143,
+          'longitude': -74.012481
+        },
+        'transactions': [],
+        'location': {
+          'address1': '180 Greenwich St',
+          'address2': '',
+          'address3': '',
+          'city': 'New York',
+          'zip_code': '10007',
+          'country': 'US',
+          'state': 'NY',
+          'display_address': [
+            '180 Greenwich St',
+            'New York, NY 10007'
+          ]
+        },
+        'phone': '+12122665211',
+        'display_phone': '(212) 266-5211',
+        'distance': 563.7632836255732
+      },
+      {
+        'id': 'vk7W3_sQwr7eZbRFsXv6rw',
+        'alias': 'taiyaki-nyc-new-york',
+        'name': 'Taiyaki NYC',
+        'image_url': 'https://s3-media2.fl.yelpcdn.com/bphoto/PMyntn0XlPvGI3pwVdsFrg/o.jpg',
+        'is_closed': false,
+        'url': 'https://www.yelp.com/biz/taiyaki-nyc-new-york?adjust_creative=oiTfb6yARFWli9QCHW2uAQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=oiTfb6yARFWli9QCHW2uAQ',
+        'review_count': 2918,
+        'categories': [
+          {
+            'alias': 'icecream',
+            'title': 'Ice Cream & Frozen Yogurt'
+          }
+        ],
+        'rating': 4.5,
+        'coordinates': {
+          'latitude': 40.71789,
+          'longitude': -73.9988
+        },
+        'transactions': [
+          'delivery'
+        ],
+        'price': '$',
+        'location': {
+          'address1': '119 Baxter St',
+          'address2': '',
+          'address3': null,
+          'city': 'New York',
+          'zip_code': '10013',
+          'country': 'US',
+          'state': 'NY',
+          'display_address': [
+            '119 Baxter St',
+            'New York, NY 10013'
+          ]
+        },
+        'phone': '+12129662882',
+        'display_phone': '(212) 966-2882',
+        'distance': 834.1635108409085
+      },
+      {
+        'id': 'o6q3jm-dU5A6nV3r2lBg9A',
+        'alias': 'chinatown-ice-cream-factory-new-york',
+        'name': 'Chinatown Ice Cream Factory',
+        'image_url': 'https://s3-media1.fl.yelpcdn.com/bphoto/1_28B8-2Isfm6hW-err31w/o.jpg',
+        'is_closed': false,
+        'url': 'https://www.yelp.com/biz/chinatown-ice-cream-factory-new-york?adjust_creative=oiTfb6yARFWli9QCHW2uAQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=oiTfb6yARFWli9QCHW2uAQ',
+        'review_count': 2803,
+        'categories': [
+          {
+            'alias': 'icecream',
+            'title': 'Ice Cream & Frozen Yogurt'
+          },
+          {
+            'alias': 'desserts',
+            'title': 'Desserts'
+          }
+        ],
+        'rating': 4.0,
+        'coordinates': {
+          'latitude': 40.715452,
+          'longitude': -73.99818
+        },
+        'transactions': [
+          'delivery'
+        ],
+        'price': '$',
+        'location': {
+          'address1': '65 Bayard St',
+          'address2': '',
+          'address3': '',
+          'city': 'New York',
+          'zip_code': '10013',
+          'country': 'US',
+          'state': 'NY',
+          'display_address': [
+            '65 Bayard St',
+            'New York, NY 10013'
+          ]
+        },
+        'phone': '+12126084170',
+        'display_phone': '(212) 608-4170',
+        'distance': 726.5191146315569
+      },
+      {
+        'id': '0CjK3esfpFcxIopebzjFxA',
+        'alias': 'joes-shanghai-new-york-2',
+        'name': 'Joe\'s Shanghai',
+        'image_url': 'https://s3-media4.fl.yelpcdn.com/bphoto/KRvabBPGaQikcpSD6vO2bg/o.jpg',
+        'is_closed': false,
+        'url': 'https://www.yelp.com/biz/joes-shanghai-new-york-2?adjust_creative=oiTfb6yARFWli9QCHW2uAQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=oiTfb6yARFWli9QCHW2uAQ',
+        'review_count': 6266,
+        'categories': [
+          {
+            'alias': 'shanghainese',
+            'title': 'Shanghainese'
+          },
+          {
+            'alias': 'seafood',
+            'title': 'Seafood'
+          },
+          {
+            'alias': 'noodles',
+            'title': 'Noodles'
+          }
+        ],
+        'rating': 4.0,
+        'coordinates': {
+          'latitude': 40.7156608,
+          'longitude': -73.9967012
+        },
+        'transactions': [
+          'pickup',
+          'delivery'
+        ],
+        'price': '$$',
+        'location': {
+          'address1': '46 Bowery St',
+          'address2': '',
+          'address3': '',
+          'city': 'New York',
+          'zip_code': '10013',
+          'country': 'US',
+          'state': 'NY',
+          'display_address': [
+            '46 Bowery St',
+            'New York, NY 10013'
+          ]
+        },
+        'phone': '+12122338888',
+        'display_phone': '(212) 233-8888',
+        'distance': 850.0471199741905
+      },
+      {
+        'id': 'mvn2XFJfIPNAlvsy-arzkA',
+        'alias': 'brooklyn-bridge-brooklyn',
+        'name': 'Brooklyn Bridge',
+        'image_url': 'https://s3-media2.fl.yelpcdn.com/bphoto/o5mJWBJ-MkHN-t7XdxhBRg/o.jpg',
+        'is_closed': false,
+        'url': 'https://www.yelp.com/biz/brooklyn-bridge-brooklyn?adjust_creative=oiTfb6yARFWli9QCHW2uAQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=oiTfb6yARFWli9QCHW2uAQ',
+        'review_count': 1398,
+        'categories': [
+          {
+            'alias': 'landmarks',
+            'title': 'Landmarks & Historical Buildings'
+          }
+        ],
+        'rating': 4.5,
+        'coordinates': {
+          'latitude': 40.7059677364821,
+          'longitude': -73.9966657489186
+        },
+        'transactions': [],
+        'location': {
+          'address1': '334 Furman St',
+          'address2': null,
+          'address3': '',
+          'city': 'Brooklyn',
+          'zip_code': '11201',
+          'country': 'US',
+          'state': 'NY',
+          'display_address': [
+            '334 Furman St',
+            'Brooklyn, NY 11201'
+            
+          ],
+          'phone': '+17187246434',
+          'display_phone': '(718) 724-6434',
+          'distance': 1089.0856375320848
+        }
+      }
+    ]
+  };
 
   const expected = [
-    //objects go here
+    {
+      'name': 'National September 11 Memorial Museum',
+      'image_url': 'https://s3-media2.fl.yelpcdn.com/bphoto/yoe6Wha7gQlTBNIeFO0UhQ/o.jpg',
+      'rating': 4.5,
+      'url': 'https://www.yelp.com/biz/national-september-11-memorial-museum-new-york?adjust_creative=oiTfb6yARFWli9QCHW2uAQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=oiTfb6yARFWli9QCHW2uAQ'
+    },
+    {
+      'name': 'Taiyaki NYC',
+      'image_url': 'https://s3-media2.fl.yelpcdn.com/bphoto/PMyntn0XlPvGI3pwVdsFrg/o.jpg',
+      'price': '$',
+      'rating': 4.5,
+      'url': 'https://www.yelp.com/biz/taiyaki-nyc-new-york?adjust_creative=oiTfb6yARFWli9QCHW2uAQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=oiTfb6yARFWli9QCHW2uAQ'
+    },
+    {
+      'name': 'Chinatown Ice Cream Factory',
+      'image_url': 'https://s3-media1.fl.yelpcdn.com/bphoto/1_28B8-2Isfm6hW-err31w/o.jpg',
+      'price': '$',
+      'rating': 4,
+      'url': 'https://www.yelp.com/biz/chinatown-ice-cream-factory-new-york?adjust_creative=oiTfb6yARFWli9QCHW2uAQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=oiTfb6yARFWli9QCHW2uAQ'
+    },
+    {
+      'name': 'Joe\'s Shanghai',
+      'image_url': 'https://s3-media4.fl.yelpcdn.com/bphoto/KRvabBPGaQikcpSD6vO2bg/o.jpg',
+      'price': '$$',
+      'rating': 4,
+      'url': 'https://www.yelp.com/biz/joes-shanghai-new-york-2?adjust_creative=oiTfb6yARFWli9QCHW2uAQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=oiTfb6yARFWli9QCHW2uAQ'
+    },
+    {
+      'name': 'Brooklyn Bridge',
+      'image_url': 'https://s3-media2.fl.yelpcdn.com/bphoto/o5mJWBJ-MkHN-t7XdxhBRg/o.jpg',
+      'rating': 4.5,
+      'url': 'https://www.yelp.com/biz/brooklyn-bridge-brooklyn?adjust_creative=oiTfb6yARFWli9QCHW2uAQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=oiTfb6yARFWli9QCHW2uAQ'
+    }
   ];
 
-  
-  
-  
-  
-  const actual = formatYelpData(yelpData);
+  const actual = formatYelpData(yelpData.data);
+
   expect(actual).toEqual(expected);
 });
 
